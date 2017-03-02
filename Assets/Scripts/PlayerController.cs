@@ -1,32 +1,47 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-    public float moveSpeed;
+	public LayerMask isGround;
+
+	public Text scoreText;
+
+	public bool grounded;
+
+	public float moveSpeed;
     public float jumpForce;
 
-    private Rigidbody2D rbody;
+	public int modifier;	// The current modifier
+	public int baseInc;		// The base amount the score increases per avoided obstacle
+	public int adj;			// How much getting a mushroom or pill
 
-    public bool grounded;
-    public LayerMask isGround;
+	private Animator myAnimator;
 
-    private Collider2D myCollider;
+	private Collider2D myCollider;
+    
+	private Rigidbody2D rbody;
 
-    private Animator myAnimator;
+	private int score;
 
 	// Use this for initialization
 	void Start () {
-
+		score = 0;
+		SetScoreText ();
         rbody = GetComponent<Rigidbody2D>();
         myCollider = GetComponent<Collider2D>();
         myAnimator = GetComponent<Animator>();
 
 	}
+
+	void Update() {
+		
+	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 
         grounded = Physics2D.IsTouchingLayers(myCollider, isGround);
 
@@ -39,5 +54,20 @@ public class PlayerController : MonoBehaviour {
 
         myAnimator.SetFloat("Speed", rbody.velocity.x);
         myAnimator.SetBool("Grounded", grounded);
+	}
+
+	void OnTriggerEnter(Collider other) {
+		// if (other.gameObject.CompareTag("Pass") {
+		// score += (baseInc - modifier);
+		// } else if (other.gameObject.CompareTag("Mushroom") {
+		// baseInc -= modifier;
+		// } else if (other.gameObject.CompareTag("Pill") {
+		// baseInc += modifier;
+		// }
+		// SetScoreText();
+	}
+
+	void SetScoreText() {
+		scoreText.text = "Score: " + score.ToString ();
 	}
 }

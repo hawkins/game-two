@@ -1,7 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MadDash", "MadDash.csproj", "{D3F6EA4D-A298-323F-CE4A-BFF06DBC7A25}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MadDash", "Assembly-CSharp.csproj", "{E3446F3B-65FA-65F7-6B16-BE5E0BFE10D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,12 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D3F6EA4D-A298-323F-CE4A-BFF06DBC7A25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D3F6EA4D-A298-323F-CE4A-BFF06DBC7A25}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D3F6EA4D-A298-323F-CE4A-BFF06DBC7A25}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D3F6EA4D-A298-323F-CE4A-BFF06DBC7A25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3446F3B-65FA-65F7-6B16-BE5E0BFE10D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3446F3B-65FA-65F7-6B16-BE5E0BFE10D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3446F3B-65FA-65F7-6B16-BE5E0BFE10D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3446F3B-65FA-65F7-6B16-BE5E0BFE10D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
