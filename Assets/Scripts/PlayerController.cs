@@ -10,13 +10,9 @@ public class PlayerController : MonoBehaviour {
 	public Text scoreText;
 
 	public bool grounded;
-
 	public float moveSpeed;
     public float jumpForce;
-
-	public int modifier;	// The current modifier
 	public int baseInc;		// The base amount the score increases per avoided obstacle
-	public int adj;			// How much getting a mushroom or pill
 
 	private Animator myAnimator;
 
@@ -24,20 +20,26 @@ public class PlayerController : MonoBehaviour {
     
 	private Rigidbody2D rbody;
 
-	private int score;
+	private float adj;		// How much getting a mushroom or pill affects the modifier
+	private float modifier;	// The current time modifier
+	private float score;
 
 	// Use this for initialization
 	void Start () {
-		score = 0;
+		score = 0.0f;
+		modifier = 0.2f;
+		adj = 0.05f;
 		SetScoreText ();
+		InvokeRepeating ("UpdateScore", 0.0f, 1.0f);	// Repeats UpdateScore every second
         rbody = GetComponent<Rigidbody2D>();
         myCollider = GetComponent<Collider2D>();
         myAnimator = GetComponent<Animator>();
 
 	}
 
-	void Update() {
-		
+	void UpdateScore() {
+		score += modifier * baseInc;
+		SetScoreText ();
 	}
 	
 	// Update is called once per frame
@@ -58,11 +60,11 @@ public class PlayerController : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) {
 		// if (other.gameObject.CompareTag("Pass") {
-		// score += (baseInc - modifier);
+		// score += baseInc;
 		// } else if (other.gameObject.CompareTag("Mushroom") {
-		// baseInc -= modifier;
+		// modifier -= adj;
 		// } else if (other.gameObject.CompareTag("Pill") {
-		// baseInc += modifier;
+		// modifer += adj;
 		// }
 		// SetScoreText();
 	}
