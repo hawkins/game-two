@@ -20,42 +20,50 @@ public class PlayerController : MonoBehaviour {
     
 	private Rigidbody2D rbody;
 
+	private bool alive;
 	private float adj;		// How much getting a mushroom or pill affects the modifier
 	private float modifier;	// The current time modifier
 	private float score;
+	private float high_score;
 
 	// Use this for initialization
 	void Start () {
+		PlayerPrefs.GetFloat ("highscore");
 		score = 0.0f;
 		modifier = 0.2f;
 		adj = 0.05f;
+		alive = true;
 		SetScoreText ();
 		InvokeRepeating ("UpdateScore", 0.0f, 1.0f);	// Repeats UpdateScore every second
-        rbody = GetComponent<Rigidbody2D>();
-        myCollider = GetComponent<Collider2D>();
-        myAnimator = GetComponent<Animator>();
+		rbody = GetComponent<Rigidbody2D> ();
+		myCollider = GetComponent<Collider2D> ();
+		myAnimator = GetComponent<Animator> ();
 
 	}
 
 	void UpdateScore() {
 		score += modifier * baseInc;
 		SetScoreText ();
+		if (score > high_score && !alive) {
+			high_score = score;
+			PlayerPrefs.SetFloat ("highscore", high_score);
+			Debug.Log ("High Score: " + high_score);
+		}
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+		grounded = Physics2D.IsTouchingLayers (myCollider, isGround);
+		rbody.velocity = new Vector2 (moveSpeed, rbody.velocity.y);
 
-        grounded = Physics2D.IsTouchingLayers(myCollider, isGround);
+		if (Input.GetKeyDown (KeyCode.Space) || Input.GetMouseButtonDown (0)) {
+			if (grounded) {
+				rbody.velocity = new Vector2 (rbody.velocity.x, jumpForce);
+			}
+		}
 
-        rbody.velocity = new Vector2(moveSpeed, rbody.velocity.y);
-
-        if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) {
-
-            if(grounded) { rbody.velocity = new Vector2(rbody.velocity.x, jumpForce); }            
-        }
-
-        myAnimator.SetFloat("Speed", rbody.velocity.x);
-        myAnimator.SetBool("Grounded", grounded);
+		myAnimator.SetFloat ("Speed", rbody.velocity.x);
+		myAnimator.SetBool ("Grounded", grounded);
 	}
 
 	void OnTriggerEnter(Collider other) {
@@ -65,6 +73,9 @@ public class PlayerController : MonoBehaviour {
 		// modifier -= adj;
 		// } else if (other.gameObject.CompareTag("Pill") {
 		// modifer += adj;
+		// if (abs(modifier) < 0.01f) {
+		// alive = false;
+		// }
 		// }
 		// SetScoreText();
 	}
