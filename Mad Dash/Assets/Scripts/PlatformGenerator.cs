@@ -13,17 +13,25 @@ public class PlatformGenerator : MonoBehaviour {
     public ObjectPooler theObjectPool;
     private ItemGenerator itemGenerator;
     private int selector;
+    private int decider;
+    private int deltaXo;
+    private int deltaXi;
+    private int deltaYo;
+    private int deltaYi;
+    private int selectorStore;
 
 	// Use this for initialization
 	void Start () {
         platformWidth = thePlatform.GetComponent<BoxCollider2D>().size.x;
         itemGenerator = FindObjectOfType<ItemGenerator>();
+        selectorStore = 0;
+        selector = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
-        if(transform.position.x < generationPoint.position.x)
+
+        if (transform.position.x < generationPoint.position.x)
         {
             transform.position = new Vector3(transform.position.x + platformWidth + distanceBetween, transform.position.y, transform.position.z);
 
@@ -34,23 +42,84 @@ public class PlatformGenerator : MonoBehaviour {
             newPlatform.transform.rotation = transform.rotation;
             newPlatform.SetActive(true);
 
-            selector = Random.Range(1, 5);
-            if(selector == 2)
+            selectorStore = selector;
+
+            selector = Random.Range(1, 9);
+            decider = Random.Range(1, 3);
+            deltaXo = Random.Range(1, 15);
+            deltaXo = Random.Range(1, 15);
+            deltaYi = Random.Range(1, 25);
+            deltaYo = Random.Range(1, 25);
+
+            while(selector == selectorStore)
             {
-                itemGenerator.SpawnMushrooms(new Vector3(transform.position.x, transform.position.y + 4f, transform.position.z));
+                selector = Random.Range(1, 9);
             }
-            if (selector == 1)
+            while(deltaXo == deltaXi)
             {
-                itemGenerator.SpawnPills(new Vector3(transform.position.x, transform.position.y + 4f, transform.position.z));
+                deltaXi = Random.Range(1, 15);
             }
-            if (selector == 3)
+
+
+
+            if(selector == 1)
             {
-                itemGenerator.SpawnSecurity_1(new Vector3(transform.position.x, transform.position.y, transform.position.z));
+                if(decider == 1) { itemGenerator.SpawnMushrooms(new Vector3(transform.position.x + deltaXo, transform.position.y + deltaYi, transform.position.z)); }
+
+                if(decider == 2) { itemGenerator.SpawnMushrooms(new Vector3(transform.position.x - deltaXo, transform.position.y + deltaYi, transform.position.z)); }
             }
+
+            if (selector == 2)
+            {
+                if (decider == 1) { itemGenerator.SpawnPills(new Vector3(transform.position.x + deltaXo, transform.position.y + deltaYi, transform.position.z)); }
+
+                if(decider == 2) { itemGenerator.SpawnPills(new Vector3(transform.position.x - deltaXo, transform.position.y + deltaYi, transform.position.z)); }
+            }
+           
+            if(selector == 3)
+            {
+                if (decider == 1) { itemGenerator.SpawnSecurity_1(new Vector3(transform.position.x + deltaXo, transform.position.y, transform.position.z)); }
+
+                if(decider == 2) { itemGenerator.SpawnSecurity_1(new Vector3(transform.position.x - deltaXo, transform.position.y, transform.position.z)); }
+            }
+
             if (selector == 4)
             {
-                itemGenerator.SpawnBench(new Vector3(transform.position.x, transform.position.y + 3f, transform.position.z));
+                if (decider == 1) { itemGenerator.SpawnSecurity_2(new Vector3(transform.position.x + deltaXo, transform.position.y, transform.position.z)); }
+
+                if(decider == 2) { itemGenerator.SpawnSecurity_2(new Vector3(transform.position.x - deltaXo, transform.position.y, transform.position.z)); }
             }
+
+            if (selector == 5)
+            {
+                if (decider == 1) { itemGenerator.SpawnDoctor(new Vector3(transform.position.x + deltaXo, transform.position.y, transform.position.z)); }
+
+                if(decider == 2) { itemGenerator.SpawnDoctor(new Vector3(transform.position.x - deltaXo, transform.position.y, transform.position.z)); }
+            }
+
+            if (selector == 6)
+            {
+                if (decider == 1) { itemGenerator.SpawnBench(new Vector3(transform.position.x + deltaXo, transform.position.y, transform.position.z)); }
+
+                if(decider == 2) { itemGenerator.SpawnBench(new Vector3(transform.position.x - deltaXo, transform.position.y, transform.position.z)); }
+            }
+
+            if (selector == 7)
+            {
+                if (decider == 1) { itemGenerator.SpawnDog(new Vector3(transform.position.x + deltaXo, transform.position.y + 1f, transform.position.z)); }
+
+                if(decider == 2) { itemGenerator.SpawnDog(new Vector3(transform.position.x - deltaXo, transform.position.y + 1f, transform.position.z)); }
+            }
+
+            if (selector == 8)
+            {
+                if (decider == 1) { itemGenerator.SpawnBird(new Vector3(transform.position.x + deltaXo, transform.position.y + deltaYo, transform.position.z)); }
+
+                if(decider == 2) { itemGenerator.SpawnBird(new Vector3(transform.position.x - deltaXo, transform.position.y + deltaYo, transform.position.z)); }
+            }
+
+            
+
 
 
         }
