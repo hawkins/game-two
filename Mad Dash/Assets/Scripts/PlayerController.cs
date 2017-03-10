@@ -35,6 +35,8 @@ public class PlayerController : MonoBehaviour {
     public AudioSource pillPickup;
     public AudioSource jump;
     public AudioSource death;
+    public AudioSource speedup;
+    public AudioSource slowdown;
 
     public Text shroomCount;
     public Text pillCount;
@@ -137,6 +139,7 @@ public class PlayerController : MonoBehaviour {
         if(other.gameObject.CompareTag("Mushroom"))
         {
             mushroomPickup.Play();
+            speedup.Play();
             other.gameObject.SetActive(false);
             mushroomTracker += 1;
             pillTracker -= 1;
@@ -156,6 +159,7 @@ public class PlayerController : MonoBehaviour {
         if (other.gameObject.CompareTag("Pill"))
         {
             pillPickup.Play();
+            slowdown.Play();
             pillTracker += 1;
             mushroomTracker -= 1;
             shroomCount.text = "x " + mushroomTracker;

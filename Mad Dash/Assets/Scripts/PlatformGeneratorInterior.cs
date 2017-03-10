@@ -47,7 +47,7 @@ public class PlatformGeneratorInterior : MonoBehaviour
 
             selectorStore = selector;
 
-            selector = Random.Range(1, 6);
+            selector = Random.Range(1, 5);
             decider = Random.Range(1, 3);
             deltaXo = Random.Range(1, 15);
             deltaXo = Random.Range(1, 15);
@@ -56,7 +56,7 @@ public class PlatformGeneratorInterior : MonoBehaviour
 
             while (selector == selectorStore)
             {
-                selector = Random.Range(1, 6);
+                selector = Random.Range(1, 5);
             }
             while (deltaXo == deltaXi)
             {
@@ -123,17 +123,17 @@ public class PlatformGeneratorInterior : MonoBehaviour
 
             if (selector == 4)
             {
-                if (decider == 1) { itemGenerator.SpawnChair(new Vector3(transform.position.x + deltaXo, transform.position.y - 5f, transform.position.z)); }
+                if (decider == 1) { itemGenerator.SpawnChair(new Vector3(transform.position.x + deltaXo, transform.position.y - 2f , transform.position.z)); }
 
-                if (decider == 2) { itemGenerator.SpawnChair(new Vector3(transform.position.x - deltaXo, transform.position.y - 5f, transform.position.z)); }
+                if (decider == 2) { itemGenerator.SpawnChair(new Vector3(transform.position.x - deltaXo, transform.position.y - 2f, transform.position.z)); }
             }
 
-            if (selector == 5)
+            /*if (selector == 5)
             {
-                if (decider == 1) { itemGenerator.SpawnClock(new Vector3(transform.position.x + deltaXo, transform.position.y + 1000f, transform.position.z)); }
+                if (decider == 1) { itemGenerator.SpawnClock(new Vector3(transform.position.x + deltaXo, transform.position.y + 15f, transform.position.z)); }
 
-                if (decider == 2) { itemGenerator.SpawnClock(new Vector3(transform.position.x - deltaXo, transform.position.y + 1000f, transform.position.z)); }
-            }
+                if (decider == 2) { itemGenerator.SpawnClock(new Vector3(transform.position.x - deltaXo, transform.position.y + 15f, transform.position.z)); }
+            }*/
 
 
 

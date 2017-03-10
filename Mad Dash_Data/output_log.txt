@@ -1,0 +1,199 @@
+Initialize engine version: 5.5.0f3 (38b4efef76f0)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 980 (ID=0x13c0)
+    Vendor:   NVIDIA
+    VRAM:     4060 MB
+    Driver:   21.21.13.7653
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\Desktop\Mad Dash_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Desktop\Mad Dash_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Desktop\Mad Dash_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Desktop\Mad Dash_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\Desktop\Mad Dash_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\Desktop\Mad Dash_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\Desktop\Mad Dash_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\Desktop\Mad Dash_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\Desktop\Mad Dash_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading D:\Desktop\Mad Dash_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: D:\Desktop\Mad Dash_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading D:\Desktop\Mad Dash_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.040 seconds
+Platform assembly: D:\Desktop\Mad Dash_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\Desktop\Mad Dash_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.868490 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.497916 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1185.
+Total: 0.329344 ms (FindLiveObjects: 0.054337 ms CreateObjectMapping: 0.030187 ms MarkObjects: 0.234555 ms  DeleteObjects: 0.009961 ms)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlatformGenerator.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlatformGenerator.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlatformGenerator.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlatformGenerator.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlatformGenerator.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.548806 ms
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1205.
+Total: 0.367380 ms (FindLiveObjects: 0.061280 ms CreateObjectMapping: 0.028074 ms MarkObjects: 0.265950 ms  DeleteObjects: 0.011471 ms)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlatformGenerator.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlatformGenerator.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlatformGenerator.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlatformGenerator.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlatformGenerator.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlatformGenerator.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlatformGenerator.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlatformGenerator.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlatformGenerator.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlatformGenerator.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlatformGenerator.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlatformGenerator.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlatformGenerator.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlatformGenerator.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlatformGenerator.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlatformGenerator.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlatformGenerator.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlatformGenerator.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlatformGenerator.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlatformGenerator.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlatformGenerator.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlatformGenerator.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlatformGenerator.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlatformGenerator.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlatformGenerator.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.572956 ms
+
+Unloading 734 unused Assets to reduce memory usage. Loaded Objects now: 313.
+Total: 0.755891 ms (FindLiveObjects: 0.055544 ms CreateObjectMapping: 0.039847 ms MarkObjects: 0.174482 ms  DeleteObjects: 0.485714 ms)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 1940 -> priority: 1 
